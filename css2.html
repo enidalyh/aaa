@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+div{width:200px; height:200px;background:rgba(51,0,0,.4); margin:100px auto; transition:1s all ease;}
+
+</style>
+<script>
+window.onload=function(){
+	var oDiv = document.querySelector('div');
+	document.onclick=function(){
+		oDiv.style.WebkitTransform='rotate(80deg)';
+		oDiv.style.MozTransform='rotate(80deg)';
+		oDiv.style.msTransform='rotate(80deg)';
+		oDiv.style.OTransform='rotate(80deg)';
+		oDiv.style.transform='rotate(80deg)';
+	};
+};
+</script>
+</head>
+
+<body>
+<div></div>
+</body>
+</html>

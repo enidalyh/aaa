@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{margin:0; padding:0;}
+body{ text-align:center; padding-top:300px;  background:#600;}
+span{ font-size:20px; color:#003; text-shadow:0px 0px 0px #FFFFCC;}
+#sun{width:100px; height:100px; background:#FFC; border-radius:50%; position:absolute; top:0; left:0; box-shadow:0px 0px 20px #FF9;}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+	var oS = document.querySelector('span');
+	var oSun = document.querySelector('#sun');
+	document.addEventListener('mousemove',function(ev){
+		var x1 = ev.pageX;
+		var y1 = ev.pageY;
+		oSun.style.left = x1-oSun.offsetWidth/2+'px';
+		oSun.style.top = y1-oSun.offsetHeight/2+'px';
+		
+		var x2 = oS.offsetLeft+oS.offsetWidth/2;
+		var y2 = oS.offsetTop+oS.offsetHeight/2;
+		
+		var disY = (y2-y1)/3;
+		var disX = (x2-x1)/3;
+		var dis = Math.sqrt(disX*disX+disY*disY)/20;
+		
+		oS.style.textShadow=disX+'px '+disY+'px '+dis+'px #000';
+	},false);
+},false);
+</script>
+</head>
+
+<body>
+<div id="sun"></div>
+<span>hahahahhahahhahaha</span>
+</body>
+</html>

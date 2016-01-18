@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{margin:0; padding:0;}
+div{width:500px; height:300px; background:-webkit-linear-gradient(0deg,#FCF,#ccc); margin:100px auto;}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+	var deg = 0;
+	var oDiv = document.querySelector('div');
+	setInterval(function(){
+		deg++;
+		oDiv.style.background='-webkit-linear-gradient('+deg+'deg,#fcf,#ccc)';
+	},16);
+},false);
+</script>
+</head>
+
+<body>
+<div></div>
+</body>
+</html>
+
